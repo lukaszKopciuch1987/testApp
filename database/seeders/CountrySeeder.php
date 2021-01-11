@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use DB;
 
 class CountrySeeder extends Seeder
 {
@@ -200,7 +201,7 @@ class CountrySeeder extends Seeder
     public function run()
     {
         foreach($this->exampleData as $data){
-                DB::table('users')->insert([
+                DB::table('countries_tab')->insert([
                     'id' => $data['id'],
                     'parent_id' => $data['parent_id'],
                     'text' => $data['text'],
